@@ -16,9 +16,9 @@ function cacheFunction(fn) {
   const cache = {};
   return (n) => {
     if (n in cache) return cache[n];
-    const res = fn(n);
-    cache[n] = res;
-    return res;
+    const result = fn(n);
+    cache[n] = result;
+    return result;
   };
 }
 
