@@ -5,7 +5,7 @@ describe("flipsArgs", () => {
   it("Should return a function", () => {
     expect(typeof flipped()).toBe("object");
   });
-  //   it("Arguments must be in reverse order", () => {
-  //     expect(flipped("a", "b")).toBe(["b", "a"]);
-  //   });
+  it("Arguments must be in reverse order", () => {
+   expect(flipped("a", "b")).toEqual(["b", "a"]);
+ });
 });
