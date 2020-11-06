@@ -4,7 +4,6 @@ class Cycled {
     this.array = [...arr];
     this.head = 0;
     this.len = this.array.length;
-    this.iterator = [Symbol.iterator]();
   }
 
   current() {
@@ -30,9 +29,7 @@ class Cycled {
   }
 
   * [Symbol.iterator]() {
-    yield 1;
-    yield 2;
-    yield 3;
+    for (const element of this.array) yield element;
   }
 
   reversed() {
